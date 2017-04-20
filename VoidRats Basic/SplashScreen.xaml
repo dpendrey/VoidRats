@@ -1,0 +1,17 @@
+﻿<Window x:Class="VoidRats_Basic.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:VoidRats_Basic"
+        Title="Loading VoidRats" Height="150" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Content="VoidRats" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="36" Grid.Row="0" Grid.Column="0" />
+        <Label Content="{Binding Source={x:Static local:MessageListener.Instance},Path=Message}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" />
+    </Grid>
+</Window>
